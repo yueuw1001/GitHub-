@@ -1,0 +1,56 @@
+{
+  "name": "dsh-github-source",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "GitHub源：输入需要的插件功能或名称，由 AI 直接搜索（网页搜索 / DeepSeek 账号令牌兜底）并从 GitHub 找出相关 DSH 插件；同时列出本机全部已安装插件。带左侧栏入口，点击在 dsh-builtin-browser 的侧栏面板内打开仓库。",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "github",
+    "plugin-search",
+    "ai-search"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "test": "node test/host.test.mjs && node test/client.test.mjs",
+    "smoke": "node test/live-smoke.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yueuw1001/GitHub-.git"
+  },
+  "homepage": "https://github.com/yueuw1001/GitHub-#readme",
+  "bugs": {
+    "url": "https://github.com/yueuw1001/GitHub-/issues"
+  },
+  "license": "MIT"
+}

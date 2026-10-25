@@ -1,0 +1,5 @@
+# GitHub源：左侧栏入口 + 中央面板。输入需要的插件功能或名称，AI 扩展检索词后去 GitHub
+# 搜索相关 DSH 插件；面板同时列出本机全部已安装插件。纯 insert，不含 config/表达式。
+- insert:
+    - id: github-source
+      name: dsh-github-source
